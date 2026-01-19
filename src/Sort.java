@@ -5,7 +5,7 @@ public class Sort {
         int comps = 0;
         for(int j = 0; j < n - 1; j++)
         {
-            swaps++;
+            comps++;
             for(int i = 0; i < n - j - 1; i++)
             {
                 if(arr[i] > arr[i + 1])
@@ -14,7 +14,7 @@ public class Sort {
                     arr[i] = arr[i] ^ arr[i+1];
                     arr[i+1] = arr[i] ^ arr[i+1];
                     arr[i] = arr[i] ^ arr[i+1];
-                    comps++;
+                    swaps++;
                 }
             }
         }
@@ -22,7 +22,7 @@ public class Sort {
         return arr;
     }
 
-    public static int[] filterBubbleSort(int arr[], int n)
+    public static int[] filteredBubbleSort(int arr[], int n)
     {
         int count = 1;
         for(int i = 0; i < n - 1; i++)

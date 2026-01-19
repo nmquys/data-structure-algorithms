@@ -48,7 +48,7 @@ public class Main {
         Sort.bubbleSort(sortArr, sortArr.length);
         System.out.println(Arrays.toString(sortArr));
 
-        int filterBubbleSort[] = Sort.filterBubbleSort(sortArr, sortArr.length);
+        int filterBubbleSort[] = Sort.filteredBubbleSort(sortArr, sortArr.length);
         System.out.println("Xoa phan tu trung nhau: " + Arrays.toString(filterBubbleSort));
 
         int selectionSort[] = Sort.selectionSort(sortArr, sortArr.length);
