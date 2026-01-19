@@ -3,6 +3,8 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
+
+        System.out.println("ARRAYS");
         int arr[] = {3,5,2,7,6,8,9,1,4};
         int value = 8;
         int index = 3;
@@ -23,10 +25,10 @@ public class Main {
         System.out.println("Deleted Array at index = " + index + ": " + Arrays.toString(deleteArray));
 
 
+        System.out.println("\nORDERED ARRAYS");
         int oderedArr[] = {1,2,4,5,6,7,8,9};
         int n = oderedArr.length;
         int value2 = 8;
-        int value3 = 3;
 
         int binarySearch = OderedArray.binarySearch(oderedArr, n, value2);
         int[] insertOrdered = OderedArray.insertOrdered(oderedArr, n, 3);
@@ -40,6 +42,8 @@ public class Main {
 
         System.out.println("Inserted Orederd Array: " + Arrays.toString(insertOrdered));
 
+        System.out.println("\nSORTS");
+
         int sortArr[] = {13,41,52,2,5,1,1};
         Sort.bubbleSort(sortArr, sortArr.length);
         System.out.println(Arrays.toString(sortArr));
@@ -49,5 +53,8 @@ public class Main {
 
         int selectionSort[] = Sort.selectionSort(sortArr, sortArr.length);
         System.out.println("Selection Sort: " + Arrays.toString(selectionSort));
+
+        int insertionSort[] = Sort.insertionSort(sortArr, sortArr.length);
+        System.out.println("Insertion Sort: " + Arrays.toString(insertionSort));
     }
 }

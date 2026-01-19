@@ -1,5 +1,5 @@
 public class Sort {
-    public static void bubbleSort(int arr[], int n)
+    public static int[] bubbleSort(int arr[], int n)
     {
         int swaps = 0;
         int comps = 0;
@@ -19,6 +19,7 @@ public class Sort {
             }
         }
     System.out.println("so lan swap: " + swaps + ", so lan comps: " + comps);
+        return arr;
     }
 
     public static int[] filterBubbleSort(int arr[], int n)
@@ -75,6 +76,23 @@ public class Sort {
             arr[min] = temp;
         }
 
+        return arr;
+    }
+
+    public static int[] insertionSort(int arr[], int n)
+    {
+        for(int i = 1; i < n; i++)
+        {
+            int key = arr[i];
+            int j = i - 1;
+
+            while(j >= 0 && arr[j] > key){
+                arr[j+1] = arr[j];
+                j--;
+            }
+
+            arr[j+1] = key;
+        }
         return arr;
     }
 }

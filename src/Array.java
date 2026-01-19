@@ -3,7 +3,7 @@ public class Array {
 
     public static int linearSearch(int arr[], int n, int value )
     {
-        System.out.println("Do dai mang arr: " + arr.length);
+        //System.out.println("Do dai mang arr: " + arr.length);
         int stepLinear = 0;
 
         for(int i = 0; i < arr.length; i++){
@@ -37,7 +37,7 @@ public class Array {
             newArr[i+1] = arr[i];
 
         }
-        System.out.println("Do dai mang inserted: " + newArr.length);
+        //System.out.println("Do dai mang inserted: " + newArr.length);
         return newArr;
     }
 
@@ -60,7 +60,7 @@ public class Array {
             newArr[i -1] = arr[i];
         }
 
-        System.out.println("Do dai mang deleted: " + newArr.length);
+        //System.out.println("Do dai mang deleted: " + newArr.length);
         return newArr;
     }
 }
