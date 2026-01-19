@@ -40,11 +40,14 @@ public class Main {
 
         System.out.println("Inserted Orederd Array: " + Arrays.toString(insertOrdered));
 
-        int bubbleSortArr[] = {13,41,52,2,5,1,1};
-        Sort.bubbleSort(bubbleSortArr, bubbleSortArr.length);
-        System.out.println(Arrays.toString(bubbleSortArr));
+        int sortArr[] = {13,41,52,2,5,1,1};
+        Sort.bubbleSort(sortArr, sortArr.length);
+        System.out.println(Arrays.toString(sortArr));
 
-        int filterBubbleSort[] = Sort.filterBubbleSort(bubbleSortArr, bubbleSortArr.length);
+        int filterBubbleSort[] = Sort.filterBubbleSort(sortArr, sortArr.length);
         System.out.println("Xoa phan tu trung nhau: " + Arrays.toString(filterBubbleSort));
+
+        int selectionSort[] = Sort.selectionSort(sortArr, sortArr.length);
+        System.out.println("Selection Sort: " + Arrays.toString(selectionSort));
     }
 }
