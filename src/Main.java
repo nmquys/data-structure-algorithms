@@ -1,0 +1,50 @@
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int arr[] = {3,5,2,7,6,8,9,1,4};
+        int value = 8;
+        int index = 3;
+
+        int linearSearch = Array.linearSearch(arr, arr.length, value);
+        int[] insertArray = Array.insertArray(arr, arr.length, value, index);
+        int[] deleteArray = Array.deleteArray(arr, arr.length, index);
+
+        if(linearSearch != -1 ){
+            System.out.println("Phan tu co Value = " + value + " nam o index: " + linearSearch);
+            System.out.println("so buoc linear search: " + linearSearch);
+        }
+        else {
+            System.out.println("khong tim thay");
+        }
+
+        System.out.println("Inserted Array at index = " + index + ": " + Arrays.toString(insertArray));
+        System.out.println("Deleted Array at index = " + index + ": " + Arrays.toString(deleteArray));
+
+
+        int oderedArr[] = {1,2,4,5,6,7,8,9};
+        int n = oderedArr.length;
+        int value2 = 8;
+        int value3 = 3;
+
+        int binarySearch = OderedArray.binarySearch(oderedArr, n, value2);
+        int[] insertOrdered = OderedArray.insertOrdered(oderedArr, n, 3);
+        if(binarySearch != -1 ){
+            //System.out.println("Binary Search Phan tu co Value = " + value2 + " nam o index: " + binarySearch);
+            System.out.println("so buoc binary search: " + binarySearch);
+        }
+        else {
+            System.out.println("khong tim thay");
+        }
+
+        System.out.println("Inserted Orederd Array: " + Arrays.toString(insertOrdered));
+
+        int bubbleSortArr[] = {13,41,52,2,5,1,1};
+        Sort.bubbleSort(bubbleSortArr, bubbleSortArr.length);
+        System.out.println(Arrays.toString(bubbleSortArr));
+
+        int filterBubbleSort[] = Sort.filterBubbleSort(bubbleSortArr, bubbleSortArr.length);
+        System.out.println("Xoa phan tu trung nhau: " + Arrays.toString(filterBubbleSort));
+    }
+}
