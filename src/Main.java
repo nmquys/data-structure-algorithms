@@ -48,13 +48,21 @@ public class Main {
         Sort.bubbleSort(sortArr, sortArr.length);
         System.out.println(Arrays.toString(sortArr));
 
-        int filterBubbleSort[] = Sort.filteredBubbleSort(sortArr, sortArr.length);
-        System.out.println("Xoa phan tu trung nhau: " + Arrays.toString(filterBubbleSort));
+        //int filterBubbleSort[] = Sort.filteredBubbleSort(sortArr, sortArr.length);
+        //System.out.println("Xoa phan tu trung nhau: " + Arrays.toString(filterBubbleSort));
 
         int selectionSort[] = Sort.selectionSort(sortArr, sortArr.length);
         System.out.println("Selection Sort: " + Arrays.toString(selectionSort));
 
         int insertionSort[] = Sort.insertionSort(sortArr, sortArr.length);
         System.out.println("Insertion Sort: " + Arrays.toString(insertionSort));
+
+        int pivot = Sort.partition(sortArr, 0, sortArr.length - 1);
+        //System.out.println("left: " + partition);
+
+        Sort.quickSort(sortArr, 0, sortArr.length - 1);
+
+
+
     }
 }
